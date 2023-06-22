@@ -7,9 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shop</title>
     <style>
-        button:hover {
-            background: var(--tg-theme-secondary-bg-color);
-        }
         #form {
             display: none;
             text-align: center;
@@ -21,7 +18,7 @@
             margin: 10px 5%;
             padding: 15px 10px;
             font-size: 14px;
-            border: 2px solid silver;
+            border: 2px solid #64a150;
             border-radius: 5px;
         }
 
@@ -48,10 +45,11 @@
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
         let order = document.getElementById("order")
+        tg.expand();
 
         buy.addEventListener("click", ()=> {
             document.getElementById("main").style.display = "none";
-            document.getElementById("form").style.display = "display";
+            document.getElementById("form").style.display = "block";
             document.getElementById("user_name").style.display = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
         })
 
