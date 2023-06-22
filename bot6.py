@@ -8,7 +8,7 @@ dp = Dispatcher(bot)
 @dp.message_handler(commands=['start'])
 async def start(message: types.Message):
     markup = types.ReplyKeyboardMarkup()
-    markup.add(types.KeyboardButton('Открыть веб страницу', web_app=WebAppInfo(url='https://itproger.com/')))
+    markup.add(types.KeyboardButton('Открыть веб страницу', web_app=WebAppInfo(url='https://raw.githubusercontent.com/H20CH3PO2/Telegram_Bots_in_Python_from_scratch_itproger/master/index.html')))
     await message.answer('Привет, мой друг!', reply_markup=markup)
 
 
